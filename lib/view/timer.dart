@@ -1,8 +1,6 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:numberpicker/numberpicker.dart';
-import 'package:timer/main.dart';
 
 class Timer1 extends StatefulWidget {
   const Timer1({super.key});
@@ -34,6 +32,7 @@ class _Timer1State extends State<Timer1> {
       timer = t;
       setState(() {
         if (timefortimer! < 1 || cenceltimer == true) {
+          stop();
           t.cancel();
           // Navigator.pushReplacement(
           //   context,
